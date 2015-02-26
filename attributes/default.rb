@@ -148,6 +148,9 @@ node.default['ice']['nginx_config']                         = 'nginx_ice_site.er
 # and recipes to configure Nginx for ice.
 node.default['ice']['nginx_config_cookbook']                = 'ice'
 
+# what scheme to use when rewriting urls to serve static files from ice
+node.default['ice']['nginx_rewrite_http_scheme']            = 'http'
+
 # Whether nginx should route all requests to Tomcat, regardless of Host: header.  Default: false.
 node.default['ice']['nginx_default_server']                 = false
 
