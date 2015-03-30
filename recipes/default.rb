@@ -135,6 +135,7 @@ if node['ice']['reader']['enabled'] == true
     mode 0644
     owner node['nginx']['user']
     group node['nginx']['group']
+    notifies :restart, 'service[nginx]', :delayed
   end
 
   # Enable ice site
